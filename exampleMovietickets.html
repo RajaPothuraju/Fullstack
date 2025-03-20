@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let movie = [
+            {Name: "Avengers", Price: 250},
+            {Name: "Spyderman", Price: 250},
+            {Name: "Harrypoter", Price: 250},
+            {Name: "Zootopia", Price: 250}
+        ];
+        
+        // for loop - to display the data stored inside array
+        console.log("Avengers Movies"); // Fixed typo from 'consle' to 'console'
+
+        for (let i = 0; i < movie.length; i++) { // Fixed typo: 'Movie' to 'movie', 'leangth' to 'length'
+            console.log((i + 1) + " - " + movie[i].Name + " - " + movie[i].Price); // Corrected array access and casing
+        }
+
+        let selectedMovies = [0, 3]; // Corrected index for "Zootopia" (last element has an index of 3, not 4)
+        
+        // Step 4: Billing
+        let totalprice = 0;
+        let index = 0;
+
+        while (index < selectedMovies.length) { // Fixed typo: 'selectdMovies' to 'selectedMovies'
+            totalprice += movie[selectedMovies[index]].Price; // Fixed syntax: 'totalprice + = ' to 'totalprice += '
+            index++;
+        }
+
+        let discount = 0;
+        let isMember = true;
+
+        do {
+            if (totalprice > 500 && isMember) {
+                discount = totalprice * 0.15;
+                console.log("Membership discount applied: 15%");
+            } else if (totalprice > 500) { // Fixed syntax: 'elseif' to 'else if'
+                discount = totalprice * 0.10;
+                console.log("Membership discount applied: 10%");
+            } else {
+                console.log("No discount");
+            }
+        } while (false); // This loop runs only once as the condition is false
+
+        let finalprice = totalprice - discount;
+        console.log("Total price before discount: " + totalprice);
+        console.log("Final price: " + finalprice);
+    </script>
+</body>
+</html>

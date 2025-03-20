@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale:1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let movie=[
+            {Name:"Avengers",Price:250},
+            {Name:"Spyderman",Price:250},
+            {Name:"Harrypoter",Price:250},
+            {Name:"Zootopia",Price:250},
+
+
+        ];
+        // for loop -to display the data stored inside array
+        consle.log("Avangers Movies")
+
+        for(let i=0;i<Movie.leangth;i++){
+            console.log((i+1) + "-" + Movie(i).name + "-" + Movie[i].price)
+
+
+        }
+        let selectedMovies = [0,4]
+        //step4: billing
+        let totalprice = 0;
+        let index = 0;
+
+        while(index<selectdMovies.length){
+            totalprice + = Movie[selectedMovies[index]].price;
+            index++
+        }
+        let discount = 0;
+        let isMember = true
+        do{
+            if(totalprice>500 && isMember){
+                discount = totalprice*0.15;
+                console.log("Membership discount applied:15%")
+            }
+            elseif(totalprice>500){
+                discount = totalprice*0.10;
+                console.log("Membership discount applied:10%")
+            }
+            else{
+                console.log("no discount")
+
+            }
+                
+            
+
+        }
+        while(false);
+        let finalprice = totalprice-discount;
+        console.log("total price before discount:"+totalprice)
+        console.log("finalprice"+finalprice);
+    </script>
+</body>
+</html>
